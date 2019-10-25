@@ -57,7 +57,7 @@ setup(
     author_email="john.s.andersen@intel.com",
     url="https://github.com/intel/dffml/blob/binsec/README.md",
     license="MIT",
-    keywords=[""],
+    keywords=["dffml"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -74,20 +74,12 @@ setup(
     packages=find_packages(),
     entry_points={
         "dffml.operation": [
-            "url_to_urlbytes = dffml_operations_binsec.operations:url_to_urlbytes",
-            "urlbytes_to_tarfile = dffml_operations_binsec.operations:urlbytes_to_tarfile.op",
-            "urlbytes_to_rpmfile = dffml_operations_binsec.operations:urlbytes_to_rpmfile.op",
-            "files_in_rpm = dffml_operations_binsec.operations:files_in_rpm.op",
-            "is_binary_pie = dffml_operations_binsec.operations:is_binary_pie.op",
-            "cleanup_rpm = dffml_operations_binsec.operations:cleanup_rpm.op",
-        ],
-        "dffml.operation.implementation": [
             "url_to_urlbytes = dffml_operations_binsec.operations:URLToURLBytes",
-            "urlbytes_to_tarfile = dffml_operations_binsec.operations:urlbytes_to_tarfile.imp",
-            "urlbytes_to_rpmfile = dffml_operations_binsec.operations:urlbytes_to_rpmfile.imp",
-            "files_in_rpm = dffml_operations_binsec.operations:files_in_rpm.imp",
-            "is_binary_pie = dffml_operations_binsec.operations:is_binary_pie.imp",
-            "cleanup_rpm = dffml_operations_binsec.operations:cleanup_rpm.imp",
+            "urlbytes_to_tarfile = dffml_operations_binsec.operations:urlbytes_to_tarfile",
+            "urlbytes_to_rpmfile = dffml_operations_binsec.operations:urlbytes_to_rpmfile",
+            "files_in_rpm = dffml_operations_binsec.operations:files_in_rpm",
+            "is_binary_pie = dffml_operations_binsec.operations:is_binary_pie",
+            "cleanup_rpm = dffml_operations_binsec.operations:cleanup_rpm",
         ],
     },
 )
